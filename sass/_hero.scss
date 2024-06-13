@@ -1,0 +1,29 @@
+@use "mixin";
+.hero {
+  color: white;
+  @include mixin.flex(space-between, center);
+  gap: 50px;
+  padding: 0 40px;
+  max-width: 1200px;
+  &__text {
+    @include mixin.flex(center, flex-start);
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    h1 {
+      font-size: 50px;
+      color: #2790b6;
+      span {
+        color: #fff;
+      }
+    }
+    p {
+      font-size: 0.85rem;
+      color: gray;
+      span {
+        @include mixin.gradiente(#30cfd0, #c43ad6);
+        font-weight: bold;
+      }
+    }
+  }
+}
